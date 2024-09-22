@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+<class name="com.projects.hibernate10.questions" table="maptable">
+<id name ="id" column="id">
+<generator class = "increment"></generator>
+</id>
+<property name="qname" column="qname"></property>
+<set name="answers" table="maptable1">
+<key name="qid"></key>
+<element column="answers" type="string"></element>
+</set>
+
+</class>
+</hibernate-mapping>

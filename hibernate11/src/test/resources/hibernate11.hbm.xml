@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+<class name="com.projects.hibernate11.questions" table="maptableq">
+<id name="id" column="id">
+<generator class="native"></generator>
+</id>
+<property name="qname" column="qname"></property>
+
+<map name="answers" table="maptablea" cascade="all">
+<key column="qid"></key>
+<index column="answers" type="string"></index>
+<element column="username" type="string"></element>
+</map>
+</class>
+</hibernate-mapping>

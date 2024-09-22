@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration>
+<session-factory>
+<property name="hbm2ddl.auto">update</property>
+<property name="dilect">org.hibernate.dilect.MYSQLDIALECT</property>
+<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/school</property>
+<property name="hibernate.connection.username">root</property>
+<property name="hibernate.connection.password">19030ee235</property>
+<mapping class="com.projects.hibernate6.employee"></mapping>
+<mapping class="com.projects.hibernate6.reg_emp"></mapping>
+<mapping class="com.projects.hibernate6.partime_emp"></mapping>
+</session-factory>
+</hibernate-configuration>
+ 

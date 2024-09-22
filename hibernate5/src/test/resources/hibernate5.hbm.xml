@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<hibernate-mapping>
+<class name="com.projects.hibernate5.employee" table="schoolemptable3">
+<id name="id">
+<generator class="increment"></generator>
+</id>
+<property name="Name"></property>
+
+<union-subclass name="com.projects.hibernate5.reg_emp" table="reg_emp">
+<property name="Salary"></property>
+<property name="Bonus"></property>
+</union-subclass>
+
+<union-subclass name="com.projects.hibernate5.partime_emp" table="partime_emp">
+<property name="Pay_as_hours"></property>
+<property name="Contract_duration"></property>
+</union-subclass>
+
+</class>
+</hibernate-mapping>
